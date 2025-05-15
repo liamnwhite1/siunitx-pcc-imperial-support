@@ -171,7 +171,7 @@ export function displayUnits(parser: TexParser, unitPieces: Array<IUnitPiece>, o
 			if (v === startsSlash) {
 				latex += ' / ';
 			}
-			const latexResult = unitLatex(v, options);
+			const latexResult = unitLatex(v, options, true); // Enable absolute power for literal unit denominators
 			// eslint-disable-next-line @typescript-eslint/no-unused-vars
 			if (latex !== '') {
 				latex += options["inter-unit-product"];
